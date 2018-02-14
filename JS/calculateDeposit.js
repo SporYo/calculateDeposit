@@ -1,6 +1,5 @@
-var calculateDeposit = function (sumDeposit, percent, termOfDeposit, isCapitalize) {
-    var totalDeposit;
-    var sumPercent = 0;
+const calculateDeposit = function (sumDeposit, percent, termOfDeposit, isCapitalize) {
+    let sumPercent = 0;
         if (isCapitalize) {
           for (var i = 0; i < termOfDeposit; i++) {
             sumPercent = sumDeposit * (percent / 12 * 0.01);
@@ -11,11 +10,11 @@ var calculateDeposit = function (sumDeposit, percent, termOfDeposit, isCapitaliz
         sumDeposit += sumPercent;
         }
     
-    totalDeposit = Math.round(sumDeposit);
+    const totalDeposit = Math.round(sumDeposit);
     
     return totalDeposit;
   }
 
- var conditionOne = calculateDeposit(100000, 10, 12, true);
+ const conditionOne = calculateDeposit(100000, 10, 12, true);
 
-  console.log(conditionOne);
+ console.log(conditionOne);
