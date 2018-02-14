@@ -1,3 +1,13 @@
+/**
+ * Позволяет считать сумму денег на вкладах с разными условиями.
+ * @author Sergey Kostin
+ * 
+ * @param {number} sumDeposit - начальная сумма депозита;
+ * @param {number} percent - процент годовых (число от 0 до 100);
+ * @param {number} termOfDeposit - срок вклада в месяцах;
+ * @param {number} isCapitalize - с капитализацией процентов или нет (булево значение).
+ * @returns {number}
+ */
 var calculateDeposit = function (sumDeposit, percent, termOfDeposit, isCapitalize) {
     var totalDeposit;
     var sumPercent = 0;
@@ -18,4 +28,4 @@ var calculateDeposit = function (sumDeposit, percent, termOfDeposit, isCapitaliz
 
  var conditionOne = calculateDeposit(100000, 10, 12, true);
 
-  console.log(conditionOne);
+ console.assert(calculateDeposit(100000, 10, 12, true) === 110471);
